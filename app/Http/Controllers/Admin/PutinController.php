@@ -19,8 +19,12 @@ class PutinController extends Controller
 	{
 		$query = Putin::query();
 		$kw = $request->kw;
+		$type = $request->type;
 		if($kw){
 			$query->where('goods.brand','like','%'.$kw.'%');
+		}
+		if($type){
+			$query->where('goods.type',$type);
 		}
 		$query->join('goods','goods.id','=','putin.goods_id');
 		$query_clone = clone $query;

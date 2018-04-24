@@ -12,6 +12,14 @@
     <form action="" class="layui-form" style="position: relative;">
     <div class="layui-inline">
         <div class="layui-input-inline">
+            <select class="layui-input search_input" name="type">
+                <option value="">请选择商品类型...</option>
+                @foreach(\App\Model\Goods::getType() as $k=>$v)
+                <option value="{{ $k }}" @if(old('type')==$k) selected @endif>{{ $v }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="layui-input-inline">
             <input type="text" value="{{ old('kw') }}" placeholder="请输入品牌名" class="layui-input search_input" name="kw">
         </div>
         <button class="layui-btn search_btn">查询</button>

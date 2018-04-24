@@ -60,7 +60,6 @@ button, input, optgroup, option, select, textarea {
 pre {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word
 }
@@ -2144,7 +2143,7 @@ a cite {
 }
 
 :root .layui-form-selected .layui-edge {
-    margin-top: -9px \0/ IE9
+    margin-top: -9px;
 }
 
 .layui-form-selectup dl {

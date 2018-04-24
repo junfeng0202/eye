@@ -71,13 +71,13 @@
                     <dl class="layui-nav-child">
                         <dd @if(isset($active_child) && $active_child=='staticIndex') class="layui-this" @endif>
                             <a href="/static">
-                                <i class="layui-icon"></i>
+                                <i class="layui-icon "></i>
                                 <cite>销量统计</cite>
                             </a>
                         </dd>
                         <dd @if(isset($active_child) && $active_child=='profit') class="layui-this" @endif>
                             <a href="/static/profit">
-                                <i class="layui-icon">&#xe735;</i>
+                                <i class="layui-icon"></i>
                                 <cite>金额统计</cite>
                             </a>
                         </dd>
