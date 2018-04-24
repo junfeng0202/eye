@@ -22,7 +22,17 @@
     <div class="layui-header header">
         <div class="layui-main">
             <a href="#" class="logo">视野联行数据管理</a>
+            <ul class="layui-nav" style="float: right;">
 
+                {{--<li class="layui-nav-item layui-hide-xs">
+                    <a href="http://fly.layui.com/" target="_blank">社区</a>
+                </li>--}}
+
+                <li class="layui-nav-item layui-hide-xs" lay-unselect="">
+                    <a href="/logout">退出<span class="layui-badge-dot"></span></a>
+                </li>
+
+                <span class="layui-nav-bar" style="left: 444px; top: 55px; width: 0px; opacity: 0;"></span></ul>
         </div>
     </div>
     <!-- 左侧导航 -->
