@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('phpinfo',function (){
+	return phpinfo();
+});
+
+
 Route::group(['namespace' => 'Admin','middleware'=>'auth'], function () {
     Route::get('/', 'GoodsController@index'); //后台首页
     Route::get('/admin/info/index','AdminController@admininfo');//管理员资料
