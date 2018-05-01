@@ -78,16 +78,25 @@ class PutoutController extends Controller
 				if($data['frame_id']){
 					$goodsFrame = Goods::find($data['frame_id']);
 					$goodsFrame->stock -= $stock;
+					if($goodsFrame->stock < 0){
+						throw new \Exception('镜框库存不足');
+					}
 					$goodsFrame->save();
 				}
 				if($data['left_glass_id']){
 					$goodsGlass = Goods::find($data['left_glass_id']);
 					$goodsGlass->stock -= $left_stock;
+					if($goodsGlass->stock < 0){
+						throw new \Exception('镜片库存不足');
+					}
 					$goodsGlass->save();
 				}
 				if($data['right_glass_id']){
 					$goodsGlass = Goods::find($data['right_glass_id']);
 					$goodsGlass->stock -= $right_stock;
+					if($goodsGlass->stock < 0){
+						throw new \Exception('镜片库存不足');
+					}
 					$goodsGlass->save();
 				}
 				//用户积分增加
